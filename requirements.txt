@@ -1,0 +1,7 @@
+# Only one essential library.
+trueskill
+
+# Feel free to install either of these if you want to.  They can be used as backends for TrueSkill.
+# However, I found that they significantly worsened performance.
+# mpmath
+# scipy
