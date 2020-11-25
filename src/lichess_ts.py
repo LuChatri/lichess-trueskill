@@ -6,7 +6,6 @@ import os.path
 import re
 import trueskill
 
-
 HERE = os.path.dirname(os.path.realpath(__file__))
 DEFAULT_DIR = HERE
 DEFAULT_MU = 25
@@ -33,7 +32,7 @@ class DrawAction(argparse.Action):
 
 
 parser = argparse.ArgumentParser(description='Rate PGNs using TrueSkill')
-parser.add_argument('-p', '-path',
+parser.add_argument('path',
                     help='Path to a Lichess PGN archive or folder of archives in the format used at database.lichess.org',
                     default=DEFAULT_DIR,
                     action=PathAction)
@@ -98,14 +97,15 @@ def main(path):
                 if pgn_headers:
                     out = rate_pgn(pgn_headers, cache)
                     if out is not None:
-                        wo, wn, bo, bn = out
+                        wo, bo, wn, bn = out
                         pgn = template.format(pgn_headers, wo.mu, wo.sigma, wn.mu,
                                               wn.sigma, bo.mu, bo.sigma, bn.mu,
                                               bn.sigma, pgn_moves)
                         print(pgn)
                 pgn_headers = ''
                 pgn_moves = ''
-            elif line.startswith('['):
+
+            if line.startswith('['):
                 pgn_headers += line
             else:
                 pgn_moves += line
@@ -138,7 +138,7 @@ def rate_pgn(pgn, cache):
     old = ((wr, ), (br, ))
     # trueskill.rate() expects and returns rating tuples, not ratings
     new = list(r[0] for r in trueskill.rate(old, ranks=ranks))
-
+    
     # Update the cache
     for user, rating in zip([white, black], new):
         cache[user] = rating
@@ -146,9 +146,8 @@ def rate_pgn(pgn, cache):
     return wr, br, new[0], new[1]
 
 
-
 if __name__ == '__main__':
     args = parser.parse_args()
     trueskill.setup(mu=args.m, sigma=args.s, beta=args.b,
                     tau=args.t, draw_probability=args.d)
-    main(args.p)
+    main(args.path)
