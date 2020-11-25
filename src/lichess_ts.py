@@ -6,8 +6,6 @@ import os.path
 import re
 import trueskill
 
-HERE = os.path.dirname(os.path.realpath(__file__))
-DEFAULT_DIR = HERE
 DEFAULT_MU = 25
 DEFAULT_SIGMA = DEFAULT_MU / 3
 DEFAULT_BETA = DEFAULT_SIGMA / 2
@@ -34,7 +32,6 @@ class DrawAction(argparse.Action):
 parser = argparse.ArgumentParser(description='Rate PGNs using TrueSkill')
 parser.add_argument('path',
                     help='Path to a Lichess PGN archive or folder of archives in the format used at database.lichess.org',
-                    default=DEFAULT_DIR,
                     action=PathAction)
 parser.add_argument('-m', '-mu',
                     help='Mu for TrueSkill ratings',
