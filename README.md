@@ -86,7 +86,7 @@ rrrrrrrrrrrroooo | 44.3997 | 2.4119 | 0.291%
 trashcan_man | 44.2671 | 3.2711 | 1.221%
 AdamBachtiar_PCTR | 44.1157 | 2.6517 | 0.373%
 
-Pinni7, the current ELO leader, is within one mu of Teilchen.  I suspect that including multiple months of results might push top ELO players onto the Antichess leaderboard.
+Pinni7, the current ELO leader, trails with a mu of about 42 and a sigma less than one.  I suspect that including multiple months of results might push top ELO players onto the Antichess leaderboard.
 ### Highest Rated Matchup
 XXIstCentury (45.3) vs VariantsBot (53.1)
 
