@@ -42,7 +42,7 @@ If `lichess_ts.py` is run with the path to a PGN archive (e.g. `python lichess_t
 [Black "sovok70"]
 [Result "1-0"]
 
-1. c4 { [%clk 0:01:30] } g6 { [%clk 0:01:30] } 2. g3 { [%clk 0:01:28] } b5 { [%clk 0:01:28] } 3. cxb5 { [%clk 0:01:28] } Bh6 { [%clk 0:01:26] } 4. b6 { [%clk 0:01:27] } cxb6 { [%clk 0:01:26] } 5. Bg2 { [%clk 0:01:19] } Bxd2 { [%clk 0:01:24] } 6. Bxa8 { [%clk 0:01:19] } Bxc1 { [%clk 0:01:21] } 7. Qxd7 { [%clk 0:01:19] } Bxb2 { [%clk 0:01:19] } 8. Qxd8 { [%clk 0:01:19] } Bxa1 { [%clk 0:01:18] } 9. Qxe7 { [%clk 0:01:17] } Kxe7 { [%clk 0:01:15] } 10. Nc3 { [%clk 0:01:15] } Bxc3 { [%clk 0:01:14] } 11. Kd2 { [%clk 0:01:12] } Bxd2 { [%clk 0:01:14] } 12. Bb7 { [%clk 0:01:08] } Bxb7 { [%clk 0:01:13] } 13. a4 { [%clk 0:01:07] } Bxh1 { [%clk 0:01:12] } 14. e4 { [%clk 0:01:07] } Bxe4 { [%clk 0:01:11] } 15. Nf3 { [%clk 0:01:02] } Bxf3 { [%clk 0:01:10] } 16. g4 { [%clk 0:01:01] } Bxg4 { [%clk 0:01:09] } 17. h3 { [%clk 0:01:01] } Bxh3 { [%clk 0:01:08] } 18. f4 { [%clk 0:01:01] } 1-0
+1. c4 { [%clk 0:01:30] } ... 18. f4 { [%clk 0:01:01] } 1-0
 ...
 ```
 
@@ -66,10 +66,32 @@ becomes
 [BlackNewMu "20.604167980000835"]
 [BlackNewSigma "7.171475587326195"]
 
-1. c4 { [%clk 0:01:30] } g6 { [%clk 0:01:30] } 2. g3 { [%clk 0:01:28] } b5 { [%clk 0:01:28] } 3. cxb5 { [%clk 0:01:28] } Bh6 { [%clk 0:01:26] } 4. b6 { [%clk 0:01:27] } cxb6 { [%clk 0:01:26] } 5. Bg2 { [%clk 0:01:19] } Bxd2 { [%clk 0:01:24] } 6. Bxa8 { [%clk 0:01:19] } Bxc1 { [%clk 0:01:21] } 7. Qxd7 { [%clk 0:01:19] } Bxb2 { [%clk 0:01:19] } 8. Qxd8 { [%clk 0:01:19] } Bxa1 { [%clk 0:01:18] } 9. Qxe7 { [%clk 0:01:17] } Kxe7 { [%clk 0:01:15] } 10. Nc3 { [%clk 0:01:15] } Bxc3 { [%clk 0:01:14] } 11. Kd2 { [%clk 0:01:12] } Bxd2 { [%clk 0:01:14] } 12. Bb7 { [%clk 0:01:08] } Bxb7 { [%clk 0:01:13] } 13. a4 { [%clk 0:01:07] } Bxh1 { [%clk 0:01:12] } 14. e4 { [%clk 0:01:07] } Bxe4 { [%clk 0:01:11] } 15. Nf3 { [%clk 0:01:02] } Bxf3 { [%clk 0:01:10] } 16. g4 { [%clk 0:01:01] } Bxg4 { [%clk 0:01:09] } 17. h3 { [%clk 0:01:01] } Bxh3 { [%clk 0:01:08] } 18. f4 { [%clk 0:01:01] } 1-0
+1. c4 { [%clk 0:01:30] } ... 18. f4 { [%clk 0:01:01] } 1-0
 ...
 ```
 
+## And Now for Something Different
+I rated the last month (Oct. 2020) of Antichess results.  Here are my findings.
+### Top Antichess Players
+| Player | Max Mu | Sigma at Max Mu | Chance of Beating VariantsBot
+| --- | --- | --- | ---
+VariantsBot (Bot) | 52.6159 | 1.7498 | 50%
+PinChampKexGasm (Banned) | 49.6982 | 1.875 | 12.763%
+Disconnectattack (Banned) | 45.895 | 2.3481 | 1.086%
+XXIstCentury (Bot) | 45.7471 | 2.3138 | 0.895%
+Teilchen | 45.3695 | 2.0685 | 0.374%
+MrHaggis | 44.6572 | 3.2738 | 1.602%
+lo-ol | 44.574 | 3.2804 | 1.527%
+rrrrrrrrrrrroooo | 44.3997 | 2.4119 | 0.291%
+trashcan_man | 44.2671 | 3.2711 | 1.221%
+AdamBachtiar_PCTR | 44.1157 | 2.6517 | 0.373%
+
+Pinni7, the current ELO leader, is within one mu of Teilchen.  I suspect that including multiple months of results might push top ELO players onto the Antichess leaderboard.
+### Highest Rated Matchup
+XXIstCentury (45.3) vs VariantsBot (53.1)
+
+### Lowest Rated Matchup
+matito (5.5) vs CaptainCadocaps (5.6)
+
 ## Performance
 This code takes three minutes to rank ~370,000 Antichess Lichess games on my mid-range laptop.  Most of this time lies in the TrueSkill library, so there's little I can do to improve performance.  Extrapolating out to the ~70,000,000 standard chess games played on Lichess last month, this program would run for about 9.5 hours.  Memory efficiency is decent.  The code backs up the file it is reading to disk in case it is interrupted (a very good thing).  Unfortunately, this means it temporarily doubles the disk space occupied by the dataset being ranked, which in the case of Lichess archives can translate to tens of Gigabytes of extra space.
-
