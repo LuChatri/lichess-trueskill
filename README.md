@@ -3,7 +3,7 @@ Applying Microsoft's [TrueSkill](https://www.microsoft.com/en-us/research/projec
 ## Installation
 To install, clone this repo.
 
-`git clone https://github.com/LuChatri/lichess-trueskill.git`
+`git clone https://github.com/LuChatri/lichess-trueskill`
 
 Install 3rd-party libraries using pip.
 
@@ -86,12 +86,11 @@ rrrrrrrrrrrroooo | 44.3997 | 2.4119 | 0.291%
 trashcan_man | 44.2671 | 3.2711 | 1.221%
 AdamBachtiar_PCTR | 44.1157 | 2.6517 | 0.373%
 
-Pinni7, the current ELO leader, trails with a mu of about 42 and a sigma less than one.  I suspect that including multiple months of results might push top ELO players onto the Antichess leaderboard.
 ### Highest Rated Matchup
-XXIstCentury (45.3) vs VariantsBot (53.1)
+XXIstCentury (45) vs VariantsBot (53)
 
 ### Lowest Rated Matchup
-matito (5.5) vs CaptainCadocaps (5.6)
+matito (6) vs CaptainCadocaps (6)
 
 ## Performance
 This code takes three minutes to rank ~370,000 Antichess Lichess games on my mid-range laptop.  Most of this time lies in the TrueSkill library, so there's little I can do to improve performance.  Extrapolating out to the ~70,000,000 standard chess games played on Lichess last month, this program would run for about 9.5 hours.  Memory efficiency is decent.  The code backs up the file it is reading to disk in case it is interrupted (a very good thing).  Unfortunately, this means it temporarily doubles the disk space occupied by the dataset being ranked, which in the case of Lichess archives can translate to tens of Gigabytes of extra space.
